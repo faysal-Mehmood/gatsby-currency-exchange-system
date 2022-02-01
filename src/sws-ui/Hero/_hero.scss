@@ -1,0 +1,153 @@
+.hero {
+	padding: 55px 0 0;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	&__wrapper {
+		@include nested-container;
+		// Hacky as fuck
+		padding-left: 27px;
+		padding-right: 27px;
+		display: flex;
+		justify-content: space-between;
+		flex-grow: 1;
+	}
+
+	&--align-left {
+		flex-direction: row;
+	}
+
+	&--align-right {
+		flex-direction: row-reverse;
+	}
+
+	&--slant-up::before {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 0%);
+		background-image: linear-gradient(180deg, #E2E2E2 0%, #F5F5F5 100%);
+	}
+
+	&--slant-down::before {
+		clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+		background-image: linear-gradient(180deg, #FFD747 0%, #FFCA0D 100%);
+	}
+
+	&::before {
+		position: absolute;
+		z-index: $z-index-background;
+		content: '';
+		height: 70%;
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	.gatsby-image-wrapper {
+		width: 50%;
+	}
+
+	&__content {
+		z-index: $z-index-content;
+		width: 45%;
+	}
+
+	h1, h2 {
+		margin: 0;
+	}
+
+	h1 {
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	h2 {
+		font-size: 24px;
+		line-height: 34px;
+	}
+
+	h2, &__content .btn {
+		margin-top: 35px;
+	}
+
+	@media (max-width: 900px) {
+		&__content {
+			width: 50%;
+		}
+
+		h2, .btn {
+			margin-top: 15px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__wrapper {
+			padding-bottom: 30%;
+			position: relative;
+		}
+
+		.gatsby-image-wrapper {
+			position: absolute !important;
+			width: 55%;
+			right: -27px;
+			bottom: 0;
+		}
+
+		&--slant-up::before, &--slant-down::before {
+			clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 50%);
+		}
+
+		&__content {
+			width: 70%;
+		}
+
+		&--align-left, &--align-right {
+			flex-direction: row;
+		}
+	}
+
+	@media (max-width: 600px) {
+		&__wrapper {
+			padding-bottom: 38%;
+		}
+
+		h1 {
+			font-size: 25px;
+			line-height: 30px;
+		}
+	
+		h2 {
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		.gatsby-image-wrapper {
+			width: 65%;
+		}
+
+		&--slant-up::before, &--slant-down::before {
+			clip-path: polygon(0% 0%, 100% 0%, 100% 62%, 0% 40%);
+		}
+
+		&__content {
+			width: 100%;
+		}
+	}
+
+	// @media (max-width: 500px) {
+	// 	.gatsby-image-wrapper {
+	// 		width: 70%;
+	// 	}
+	// }
+
+	// @media (max-width: 450px) {
+	// 	&__wrapper {
+	// 		height: 80%;
+	// 	}
+	// }
+
+	// @media (max-width: 400px) {
+	// 	&__wrapper {
+	// 		height: 65%;
+	// 	}
+	// }
+}

@@ -1,0 +1,86 @@
+.btn  {
+	display: inline-block;
+	position: relative;
+	padding: 18px 28px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 18px;
+	line-height: 18px;
+	
+	&--yellow {
+		background-image: linear-gradient(180deg, #FFD747 0%, #FFCA0D 100%);
+		&, &:hover, &:active, &:focus {
+			color: $moon;
+		}
+	}
+
+	&--blue {
+		background-image: linear-gradient(180deg, #4C68BA 0%, #45578C 100%);
+		&, &:hover, &:active, &:focus {
+			color: $mustard;
+		}
+	}
+
+	&--arrow {
+		width: 50px;
+		height: 50px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-color: $moon;
+			transform: translate(-50%, -50%);
+			width: 23px;
+			height: 1px;
+		}
+
+		// Arrow
+		&:after {
+			content: '';
+			position: absolute;
+			right: 50%;
+			top: 50%;
+			border: solid $moon;
+			border-width: 0 1px 1px 0;
+			transform: translate(calc(-50% + 15px), -50%) rotate(-45deg);
+			width: 10px;
+			height: 10px;
+		}
+	}
+}
+
+button.swal2-styled {
+	display: inline-block;
+	position: relative;
+	padding: 18px 28px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 18px;
+	line-height: 18px;
+	outline: none !important;
+
+	&.swal2-confirm {
+		background-image: linear-gradient(180deg, #FFD747 0%, #FFCA0D 100%);
+		&, &:hover, &:active, &:focus {
+			background-image: linear-gradient(180deg, #FFD747 0%, #FFCA0D 100%) !important;
+			color: $moon;
+		}
+	}
+
+	&.swal2-cancel {
+		background-color: transparent !important;
+		border: 2px solid #45578C;
+		font-weight: bold;
+		color: #45578C;
+		padding: 16px 26px;
+		&, &:hover, &:active, &:focus {
+			background-color: transparent !important;
+			
+			background-image: none !important;
+			color: $moon;
+		}
+	}
+
+}

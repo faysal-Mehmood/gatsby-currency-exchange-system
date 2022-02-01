@@ -1,0 +1,40 @@
+$grid-size: 8px;
+$container-width: 1145px;
+$gutter-width: 27px;
+$box-shadow-light: 5px 10px 20px rgba(31, 32, 65, 0.05);
+$box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+$dark-green: #B0D9C6;
+$sea-mist: #B0D9C6;
+$light-green: #D9FBEB;
+$smokelight: #F2F2F2;
+$smoke: #E2E2E2;
+$blue: #41479B;
+$shadow: #28354C;
+$mist: #F2F2F2;
+$mint: #2CBDBE;
+$moon: #45578C;
+$fade: #E1E7FC;
+$mustard: #FFD747;
+$dragonfruit: #F16171;
+$cream: #FFF1AA;
+$white: #FFFFFF;
+$dust: #C1C2C5;
+$shadow: #28354C;
+$opal: #2CBDBE;
+$linkblue: #214DCE;
+$black: #000000;
+
+$z-index-background: 0;
+$z-index-content: 10;
+$z-index-overlay: 20;
+
+@mixin nested-container {
+	max-width: $container-width;
+	margin: 0 auto;
+
+	// @media (max-width: 1200px) {
+	// 	padding-left: 27px;
+	// 	padding-right: 27px;
+	// }
+}

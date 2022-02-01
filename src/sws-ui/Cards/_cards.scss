@@ -1,0 +1,141 @@
+.cards {
+    padding: 80px $gutter-width;
+
+    @media (max-width: 768px) {
+        padding: 40px $gutter-width;
+    }
+
+    &__wrapper {
+        @include nested-container;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+
+    &--mist {
+        background-color: $mist;
+    }
+
+    &--white {
+        background-color: #FFFFFF;
+    }
+
+    &--left {
+        text-align: left;
+    }
+
+
+
+    &--center {
+        text-align: center;
+
+        @media (min-width: 768px) {
+            & .cards__wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .cards__content {
+            max-width: 70%;
+
+            @media (max-width: 768px) {
+                max-width: 100%;
+            }
+        }
+    }
+
+
+    &--half .card {
+        width: calc((100% / 2) - 20px);
+    }
+
+    &--third .card {
+        width: calc((100% / 3) - 20px);
+    }
+
+
+    .card {
+        position: relative;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        padding: 50px 45px 60px;
+        border: none;
+        margin-bottom: 40px;
+        background-color: white;
+        box-shadow: $box-shadow-light;
+
+        &--mint {
+            background-color: $light-green;
+        }
+
+        &--cream {
+            background-color: $cream;
+        }
+
+        &--fade {
+            background-color: $fade;
+        }
+
+        h3,
+        p {
+            margin: 0;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        span {
+            font-size: 50px;
+            line-height: 50px;
+            margin-bottom: 20px;
+            color: $mint;
+        }
+
+        .link {
+            position: absolute;
+            bottom: 30px;
+        }
+
+        @media (max-width: 850px) {
+            width: calc(50% - 20px);
+        }
+
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+    }
+
+    &--no-borders {
+        .card {
+            padding: 0 0 60px;
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+
+    .btn {
+        width: 240px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .cards {
+        & .card {
+            & .link {
+                position: relative;
+                margin-top: 15px;
+                bottom: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,226 @@
+.container {
+	max-width: 100%;
+	padding: 0;
+  display: grid;
+  display: -ms-grid;
+	grid-template-columns: [start] minmax(27px, 1fr) [col-start] minmax(0, 68px) [col-end] 15px repeat(10, 15px [col-start] minmax(0, 68px) [col-end] 15px) 15px [col-start] minmax(27px, 68px) [col-end] minmax(27px, 1fr) [end];
+  -ms-grid-columns: minmax(27px, 1fr) minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) minmax(27px, 1fr);
+  position: relative;
+}
+
+// Same as col-1-12, will place between 1st and 12th column
+.col-center {
+	grid-column: 2;
+	-ms-grid-column: 2;
+	grid-column-end: 36;
+	-ms-grid-column-span: 34;
+}
+
+// Will be full width
+.col-full {
+	grid-column: 1;
+	-ms-grid-column: 1;
+	grid-column-end: 37;
+	-ms-grid-column-span: 37;
+}
+
+// Usage: col-${colStart}-${colEnd}
+$colStart: 2;
+@for $i from 1 through 12 {
+	@for $j from 1 through 12 {
+		.col-#{$i}-#{$j} {
+			$colEnd: #{3 * $j};
+			$colSpan: #{(3 * $j) - $colStart};
+			grid-column: $colStart;
+			-ms-grid-column: $colStart;
+			grid-column-end: $colEnd;
+			-ms-grid-column-span: $colSpan;
+		}
+	}
+	$colStart: $colStart + 3;
+}
+
+// Usage: row-${row}
+@for $i from 1 through 25 {
+	.row-#{$i} {
+		grid-row: $i;
+		-ms-grid-row: $i;
+	}
+
+	// Usage: row-${rowStart}-${rowEnd}
+	@for $j from 1 through 25 {
+		.row-#{$i}-#{$j} {
+			grid-row: $i;
+			-ms-grid-row: $i;
+			grid-row-end: row-end $j;
+			-ms-grid-row-span: #{($j - $i) + 1};
+		}
+	}
+}
+
+// LG Media Query
+@media (max-width: 992px) {
+	// Same as col-lg-1-12, will place between 1st and 12th column
+	.col-lg-center {
+		grid-column: 2;
+		-ms-grid-column: 2;
+		grid-column-end: 36;
+		-ms-grid-column-span: 34;
+	}
+
+	// Will be full width
+	.col-lg-full {
+		grid-column: 1;
+		-ms-grid-column: 1;
+		grid-column-end: 37;
+		-ms-grid-column-span: 37;
+	}
+
+	// Usage: col-lg-${colStart}-${colEnd}
+	$colStart: 2;
+	@for $i from 1 through 12 {
+		@for $j from 1 through 12 {
+			.col-lg-#{$i}-#{$j} {
+				$colEnd: #{3 * $j};
+				$colSpan: #{(3 * $j) - $colStart};
+				grid-column: $colStart;
+				-ms-grid-column: $colStart;
+				grid-column-end: $colEnd;
+				-ms-grid-column-span: $colSpan;
+			}
+		}
+		$colStart: $colStart + 3;
+	}
+
+	// Usage: row-lg-${row}
+	@for $i from 1 through 25 {
+		.row-lg-#{$i} {
+			grid-row: $i;
+			-ms-grid-row: $i;
+		}
+
+		// Usage: row-lg-${rowStart}-${rowEnd}
+		@for $j from 1 through 25 {
+			.row-lg-#{$i}-#{$j} {
+				grid-row: $i;
+				-ms-grid-row: $i;
+				grid-row-end: row-end $j;
+				-ms-grid-row-span: #{($j - $i) + 1};
+			}
+		}
+	}
+}
+
+
+// MD Media Query
+@media (max-width: 768px) {
+	// Same as col-lg-1-12, will place between 1st and 12th column
+	.col-md-center {
+		grid-column: 2;
+		-ms-grid-column: 2;
+		grid-column-end: 36;
+		-ms-grid-column-span: 34;
+	}
+
+	// Will be full width
+	.col-md-full {
+		grid-column: 1;
+		-ms-grid-column: 1;
+		grid-column-end: 37;
+		-ms-grid-column-span: 37;
+	}
+
+	// Usage: col-md-${colStart}-${colEnd}
+	$colStart: 2;
+	@for $i from 1 through 12 {
+		@for $j from 1 through 12 {
+			.col-md-#{$i}-#{$j} {
+				$colEnd: #{3 * $j};
+				$colSpan: #{(3 * $j) - $colStart};
+				grid-column: $colStart;
+				-ms-grid-column: $colStart;
+				grid-column-end: $colEnd;
+				-ms-grid-column-span: $colSpan;
+			}
+		}
+		$colStart: $colStart + 3;
+	}
+
+	// Usage: row-md-${row}
+	@for $i from 1 through 25 {
+		.row-md-#{$i} {
+			grid-row: $i;
+			-ms-grid-row: $i;
+		}
+
+		// Usage: row-md-${rowStart}-${rowEnd}
+		@for $j from 1 through 25 {
+			.row-md-#{$i}-#{$j} {
+				grid-row: $i;
+				-ms-grid-row: $i;
+				grid-row-end: row-end $j;
+				-ms-grid-row-span: #{($j - $i) + 1};
+			}
+		}
+	}
+}
+
+// SM Media Query
+@media (max-width: 450px) {
+  .container {
+    // grid-template-columns: [start] 27px [col-start] minmax(0, 68px) [col-end] 15px repeat(4, 15px [col-start] minmax(0, 68px) [col-end] 15px) 15px [col-start] minmax(0, 68px) [col-end] 27px [end];
+		// -ms-grid-columns: 27px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 15px 15px minmax(0, 68px) 27px;
+		grid-template-columns: 27px repeat(5, minmax(0, 68px) 30px) minmax(0, 68px) 27px;
+    -ms-grid-columns: 27px minmax(0, 68px) 30px minmax(0, 68px) 30px minmax(0, 68px) 30px minmax(0, 68px) 30px minmax(0, 68px) 30px minmax(0, 68px) 27px;
+	}
+	
+	// Same as col-sm-1-6, will place between 1st and 6th column
+	.col-sm-center {
+		grid-column: 2;
+		-ms-grid-column: 2;
+		grid-column-end: 13;
+		-ms-grid-column-span: 13;
+	}
+
+	// Will be full width
+	.col-sm-full {
+		grid-column: 1;
+		-ms-grid-column: 1;
+		grid-column-end: 14;
+		-ms-grid-column-span: 14;
+	}
+
+	// Usage: col-sm-${colStart}-${colEnd}
+	$colStart: 2;
+	@for $i from 1 through 6 {
+		@for $j from 1 through 6 {
+			.col-sm-#{$i}-#{$j} {
+				$colEnd: #{3 * $j};
+				$colSpan: #{(3 * $j) - $colStart};
+				grid-column: $colStart;
+				-ms-grid-column: $colStart;
+				grid-column-end: $colEnd;
+				-ms-grid-column-span: $colSpan;
+			}
+		}
+		$colStart: $colStart + 2;
+	}
+
+	// Usage: row-sm-${row}
+	@for $i from 1 through 25 {
+		.row-sm-#{$i} {
+			grid-row: $i;
+			-ms-grid-row: $i;
+		}
+
+		// Usage: row-sm-${rowStart}-${rowEnd}
+		@for $j from 1 through 25 {
+			.row-sm-#{$i}-#{$j} {
+				grid-row: $i;
+				-ms-grid-row: $i;
+				grid-row-end: row-end $j;
+				-ms-grid-row-span: #{($j - $i) + 1};
+			}
+		}
+	}
+}

@@ -1,0 +1,66 @@
+.link {
+	font-size: 18px;
+	line-height: 28px;
+	width: max-content;
+
+	&, &:hover, &:active, &:focus, &:visited, &:link {
+		color: $moon;
+	}
+
+	&--arrow {
+		display: inline-block;
+		position: relative;
+		
+		&:hover {
+			&:before {
+				animation: linkLine 2s ease-in-out infinite alternate;
+			}
+			
+			&:after {
+				animation: linkArrow 2s ease-in-out infinite alternate;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: calc(100% + 15px);
+			background-color: $moon;
+			transform: translateY(-50%);
+			width: 25px;
+			height: 1px;
+		}
+
+		// Arrow
+		&:after {
+			content: '';
+			position: absolute;
+			right: -40px;
+			top: calc(50%);
+			border: solid $moon;
+			border-width: 0 1px 1px 0;
+			transform: translateY(-50%) rotate(-45deg);
+			width: 10px;
+			height: 10px;
+		}
+	}
+
+	@keyframes linkLine {
+		from {
+			width: 25px;
+		}
+		to {
+			width: 40px;
+		}
+	}
+
+	@keyframes linkArrow {
+		from {
+			right: -40px;
+		}
+		to {
+			right: -55px;
+		}
+	}
+}

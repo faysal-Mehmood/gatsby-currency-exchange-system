@@ -1,0 +1,27 @@
+header {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid $smoke;
+	min-height: 56px;
+	height: auto;
+
+	// TEMPORARY - to stop overflow, will deal with later
+	overflow: hidden;
+
+	a {
+		align-self: center;
+
+		.gatsby-image-wrapper {
+			margin: 0 40px 0 75px;
+
+			@media (max-width: 768px) {
+				margin-left: 30px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			position: absolute;
+			top: 13px;
+		}
+	}
+}

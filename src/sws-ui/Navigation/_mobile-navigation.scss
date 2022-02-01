@@ -1,0 +1,46 @@
+.ant-menu.ant-menu-root.ant-menu-inline {
+
+	.ant-menu-submenu-title, .ant-menu-submenu-selected, .ant-menu-sub .ant-menu-item {
+		color: $moon;
+	}
+
+	> .ant-menu-submenu > .ant-menu-submenu-title {
+		display: flex;
+		align-items: center;
+		margin: 0 15px 0 auto;
+		width: 20px;
+		color: $moon !important;
+		height: 56px !important;
+		line-height: 56px !important;
+		background: transparent !important;
+
+		.anticon {
+			margin: 0;
+			font-size: 20px;
+		}
+
+		.ant-menu-submenu-arrow {
+			display: none;
+		}
+	}
+
+	.ant-menu-submenu {
+		&-title:focus {
+			background-color: $cream;
+		}
+	
+		.ant-menu-item {
+			&:active, &.ant-menu-item-selected {
+				background-color: $cream;
+		
+				&:after {
+					border-right: 3px solid $mustard;
+				}
+			}
+		}
+	}
+
+	// .ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+	// 	right: 48px;
+	// }
+}

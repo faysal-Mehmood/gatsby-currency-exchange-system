@@ -1,0 +1,16 @@
+@import "src/css/variables";
+
+.faq__heading {
+	padding: 30px 0 20px 0;
+	border-bottom: 1px solid $smoke;
+}
+
+.faq__title {
+	margin: 50px 0;
+}
+
+@media (max-width: 992px) {
+    .faq__title {
+        margin: 30px 0;
+    }
+}

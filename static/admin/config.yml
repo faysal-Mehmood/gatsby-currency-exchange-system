@@ -1,0 +1,904 @@
+backend:
+  name: github
+  repo: muhammadqamar/smartway #replace with your username/repo
+publish_mode: editorial_workflow
+media_folder: static/assets
+
+collections:
+
+  - name: Money_transfer_page
+    label: Money transfer page
+    folder: "markdowns_files/money_tranfer_page"
+    create: true
+    fields:
+      - {
+          name: slug,
+          label: slug,
+          widget: hidden,
+          default: moneytransferpagcomplete,
+        }
+      - {
+          name: category_language,
+          widget: select,
+          label: select Language,
+          options: ["English", "Thi"],
+        }
+      - { name: title, label: Title }
+      - { name: banner_heading, label: banner_heading, widget: text }
+      - {
+          name: banner_description,
+          label: banner_description,
+          widget: markdown,
+        }
+      - { name: banner_button_text, label: banner_button_text, widget: text }
+      - { name: banner_image, label: banner_image, widget: image }
+      - {
+          name: life_transaction_heading,
+          label: life_transaction_heading,
+          widget: text,
+        }
+      - {
+          name: life_transaction_image_one,
+          label: life_transaction_image_one,
+          widget: image,
+        }
+      - {
+          name: life_transaction_heading_one,
+          label: life_transaction_heading_one,
+          widget: text,
+        }
+      - {
+          name: life_transaction_description_one,
+          label: life_transaction_description_one,
+          widget: text,
+        }
+      - {
+          name: life_transaction_image_two,
+          label: life_transaction_image_two,
+          widget: image,
+        }
+      - {
+          name: life_transaction_heading_two,
+          label: life_transaction_heading_two,
+          widget: text,
+        }
+      - {
+          name: life_transaction_description_two,
+          label: life_transaction_description_two,
+          widget: text,
+        }
+      - {
+          name: life_transaction_image_three,
+          label: life_transaction_image_three,
+          widget: image,
+        }
+      - {
+          name: life_transaction_heading_three,
+          label: life_transaction_heading_three,
+          widget: text,
+        }
+      - {
+          name: life_transaction_description_three,
+          label: life_transaction_description_three,
+          widget: text,
+        }
+      - {
+          name: life_transaction_image_four,
+          label: life_transaction_image_four,
+          widget: image,
+        }
+      - {
+          name: life_transaction_heading_four,
+          label: life_transaction_heading_four,
+          widget: text,
+        }
+      - {
+          name: life_transaction_description_four,
+          label: life_transaction_description_four,
+          widget: text,
+        }
+      - {
+          name: get_verified_heading,
+          label: get_verified_heaidng,
+          widget: text,
+        }
+      - {
+          name: get_verified_description,
+          label: get_verified_description,
+          widget: markdown,
+        }
+
+      - {
+          name: get_verified_heading_one,
+          label: get_verified_heading_one,
+          widget: text,
+        }
+      - {
+          name: get_verified_description_one,
+          label: get_verified_description_one,
+          widget: markdown,
+        }
+      - {
+          name: get_verified__link_text_one,
+          label: get_verified__link_text_one,
+          widget: text,
+        }
+
+      - {
+          name: get_verified_heading_two,
+          label: get_verified_heading_two,
+          widget: text,
+        }
+      - {
+          name: get_verified_description_two,
+          label: get_verified_description_two,
+          widget: markdown,
+        }
+      - {
+          name: get_verified__link_text_two,
+          label: get_verified__link_text_two,
+          widget: text,
+        }
+
+      - {
+          name: get_verified_heading_three,
+          label: get_verified_heading_three,
+          widget: text,
+        }
+      - {
+          name: get_verified_description_three,
+          label: get_verified_description_three,
+          widget: markdown,
+        }
+      - {
+          name: get_verified__link_text_three,
+          label: get_verified__link_text_three,
+          widget: text,
+        }
+      - {
+          name: easy_transfer_heaidng,
+          label: easy_transfer_heaidng,
+          widget: text,
+        }
+      - {
+          name: easy_transfer_description,
+          label: easy_transfer_description,
+          widget: text,
+        }
+      - {
+          name: easy_transfer_image_one,
+          label: easy_transfer_image_one,
+          widget: image,
+        }
+
+      - {
+          name: easy_transfer_heading_one,
+          label: easy_transfer_heading_one,
+          widget: text,
+        }
+      - {
+          name: easy_transfer_description_one,
+          label: easy_transfer_description_one,
+          widget: markdown,
+        }
+      - {
+          name: easy_transfer_link_text_one,
+          label: easy_transfer_link_text_one,
+          widget: text,
+        }
+
+      - {
+          name: easy_transfer_image_two,
+          label: easy_transfer_image_two,
+          widget: image,
+        }
+      - {
+          name: easy_transfer_heading_two,
+          label: easy_transfer_heading_two,
+          widget: text,
+        }
+      - {
+          name: easy_transfer_description_two,
+          label: easy_transfer_description_two,
+          widget: markdown,
+        }
+      - {
+          name: easy_transfer_link_text_two,
+          label: easy_transfer_link_text_two,
+          widget: text,
+        }
+
+      - {
+          name: easy_transfer_image_three,
+          label: easy_transfer_image_three,
+          widget: image,
+        }
+      - {
+          name: easy_transfer_heading_three,
+          label: easy_transfer_heading_three,
+          widget: text,
+        }
+      - {
+          name: easy_transfer_description_three,
+          label: easy_transfer_description_three,
+          widget: markdown,
+        }
+      - {
+          name: easy_transfer_link_text_three,
+          label: easy_transfer_link_text_three,
+          widget: text,
+        }
+      - {
+          name: easy_transfer_image_four,
+          label: easy_transfer_image_four,
+          widget: image,
+        }
+      - {
+          name: easy_transfer_heading_four,
+          label: easy_transfer_heading_four,
+          widget: text,
+        }
+      - {
+          name: easy_transfer_description_four,
+          label: easy_transfer_description_four,
+          widget: markdown,
+        }
+      - {
+          name: easy_transfer_link_text_four,
+          label: easy_transfer_link_text_four,
+          widget: text,
+        }
+
+      - {
+          name: easy_transfer_image_five,
+          label: easy_transfer_image_five,
+          widget: image,
+        }
+      - {
+          name: easy_transfer_heading_five,
+          label: easy_transfer_heading_five,
+          widget: text,
+        }
+      - {
+          name: easy_transfer_description_five,
+          label: easy_transfer_description_five,
+          widget: markdown,
+        }
+      - {
+          name: easy_transfer_link_text_five,
+          label: easy_transfer_link_text_five,
+          widget: text,
+        }
+
+      - {
+          name: easy_transfer_image_six,
+          label: easy_transfer_image_six,
+          widget: image,
+        }
+      - {
+          name: easy_transfer_heading_six,
+          label: easy_transfer_heading_six,
+          widget: text,
+        }
+      - {
+          name: easy_transfer_description_six,
+          label: easy_transfer_description_six,
+          widget: markdown,
+        }
+      - {
+          name: easy_transfer_link_text_six,
+          label: easy_transfer_link_text_six,
+          widget: text,
+        }
+
+  - name: Home_page
+    label: Home page
+    folder: "markdowns_files/Home_page"
+    create: true
+    fields:
+      - { name: slug, label: slug, widget: hidden, default: home }
+      - {
+          name: category_language,
+          widget: select,
+          label: select Language,
+          options: ["English", "Thi"],
+        }
+      - { required: false, name: title, label: Title }
+      - {
+          required: false,
+          name: banner_heading,
+          label: banner_heading,
+          widget: text,
+        }
+      - {
+          name: banner_description,
+          label: banner_description,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          required: false,
+          name: banner_button_text,
+          label: banner_button_text,
+          widget: text,
+        }
+      - {
+          required: false,
+          name: banner_image,
+          label: banner_image,
+          widget: image,
+        }
+
+      - {
+          name: fast_transaction_image_one,
+          label: fast_transaction_image_one,
+          widget: image,
+          required: false,
+        }
+      - {
+          required: false,
+          name: fast_transaction_heading_one,
+          label: fast_transaction_heading_one,
+          widget: text,
+        }
+      - {
+          required: false,
+          name: fast_transaction_description_one,
+          label: fast_transaction_description_one,
+          widget: markdown,
+        }
+
+      - {
+          name: fast_transaction_image_two,
+          label: fast_transaction_image_two,
+          widget: image,
+          required: false,
+        }
+      - {
+          name: fast_transaction_heading_two,
+          label: fast_transaction_heading_two,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: fast_transaction_description_two,
+          label: fast_transaction_description_two,
+          widget: markdown,
+          required: false,
+        }
+
+      - {
+          name: fast_transaction_image_three,
+          label: fast_transaction_image_three,
+          widget: image,
+          required: false,
+        }
+      - {
+          name: fast_transaction_heading_three,
+          label: fast_transaction_heading_three,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: fast_transaction_description_three,
+          label: fast_transaction_description_three,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: fast_transaction_image_four,
+          label: fast_transaction_image_four,
+          widget: image,
+          required: false,
+        }
+      - {
+          name: fast_transaction_heading_four,
+          label: fast_transaction_heading_four,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: fast_transaction_description_four,
+          label: fast_transaction_description_four,
+          widget: markdown,
+          required: false,
+        }
+
+      - {
+          required: false,
+          name: get_the_app_image,
+          label: get_the_app_image,
+          widget: image,
+        }
+      - {
+          required: false,
+          name: get_the_app_heading,
+          label: get_the_app_heading,
+          widget: text,
+        }
+      - {
+          name: get_the_app_description,
+          label: get_the_app_description,
+          widget: markdown,
+          required: false,
+        }
+
+      - {
+          name: app_feature_image_one,
+          label: app_feature_image_one,
+          widget: image,
+          required: false,
+        }
+      - {
+          name: app_feature_heading_one,
+          label: app_feature_heading_one,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: app_feature_description_one,
+          label: app_feature_description_one,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: app_feature_image_two,
+          label: app_feature_image_two,
+          widget: image,
+          required: false,
+        }
+      - {
+          name: app_feature_heading_two,
+          label: app_feature_heading_two,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: app_feature_description_two,
+          label: app_feature_description_two,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: app_feature_image_three,
+          label: app_feature_image_three,
+          widget: image,
+          required: false,
+        }
+      - {
+          name: app_feature_heading_three,
+          label: app_feature_heading_three,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: app_feature_description_three,
+          label: app_feature_description_three,
+          widget: markdown,
+          required: false,
+        }
+
+      - {
+          name: testominal_slider_image,
+          label: testominal_slider_image,
+          widget: image,
+          required: false,
+        }
+      - {
+          name: testominal_slider_heading_one,
+          label: testominal_slider_heading_one,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: testominal_slider_description_one,
+          label: testominal_slider_description_one,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: testominal_slider_heading_two,
+          label: testominal_slider_heading_two,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: testominal_slider_description_two,
+          label: testominal_slider_description_two,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: testominal_slider_heading_three,
+          label: testominal_slider_heading_three,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: testominal_slider_description_three,
+          label: testominal_slider_description_three,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: easy_transfer_section_main_title,
+          label: easy_transfer_section_main_title,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: easy_transfer_section_main_description,
+          label: easy_transfer_section_main_description,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: easy_transfer_heading_one,
+          label: easy_transfer_heading_one,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: easy_transfer_description_one,
+          label: easy_transfer_description_one,
+          widget: markdown,
+          required: false,
+        }
+
+      - {
+          name: easy_transfer_heading_two,
+          label: easy_transfer_heading_two,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: easy_transfer_description_two,
+          label: easy_transfer_description_two,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: easy_transfer_heading_three,
+          label: easy_transfer_heading_three,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: easy_transfer_description_three,
+          label: easy_transfer_description_three,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: easy_transfer_heading_four,
+          label: easy_transfer_heading_four,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: easy_transfer_description_four,
+          label: easy_transfer_description_four,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: easy_transfer_heading_five,
+          label: easy_transfer_heading_four,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: easy_transfer_description_five,
+          label: easy_transfer_description_five,
+          widget: markdown,
+          required: false,
+        }
+
+      - {
+          name: easy_transfer_heading_six,
+          label: easy_transfer_heading_six,
+          widget: text,
+          required: false,
+        }
+      - {
+          name: easy_transfer_description_six,
+          label: easy_transfer_description_six,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          name: easy_transfer_button_text,
+          label: easy_transfer_button_text,
+          widget: text,
+          required: false,
+        }
+
+      - { required: false, name: FAQ_heading, label: FAQ_heading, widget: text }
+      - {
+          required: false,
+          name: FAQ_question_one,
+          label: FAQ_question_one,
+          widget: markdown,
+        }
+      - {
+          required: false,
+          name: FAQ_answer_one,
+          label: FAQ_answer_one,
+          widget: markdown,
+        }
+      - {
+          required: false,
+          name: FAQ_question_two,
+          label: FAQ_question_two,
+          widget: markdown,
+        }
+      - {
+          required: false,
+          name: FAQ_answer_two,
+          label: FAQ_answer_two,
+          widget: markdown,
+        }
+      - {
+          required: false,
+          name: FAQ_question_three,
+          label: FAQ_question_three,
+          widget: markdown,
+        }
+      - {
+          required: false,
+          name: FAQ_answer_three,
+          label: FAQ_answer_three,
+          widget: markdown,
+        }
+      - {
+          required: false,
+          name: FAQ_question_four,
+          label: FAQ_question_four,
+          widget: markdown,
+        }
+      - {
+          required: false,
+          name: FAQ_answer_four,
+          label: FAQ_answer_four,
+          widget: markdown,
+        }
+      - {
+          required: false,
+          name: FAQ_question_five,
+          label: FAQ_question_five,
+          widget: markdown,
+        }
+      - {
+          required: false,
+          name: FAQ_answer_five,
+          label: FAQ_answer_five,
+          widget: markdown,
+        }
+      - {
+          name: FAQ_button_link_text,
+          label: FAQ_button_link_text,
+          widget: text,
+          required: false,
+        }
+
+      - {
+          required: false,
+          name: blog_main_title,
+          label: blog_main_title,
+          widget: text,
+        }
+      - {
+          name: blog_main_description,
+          label: blog_main_description,
+          widget: markdown,
+          required: false,
+        }
+
+      - {
+          required: false,
+          name: blog_image_one,
+          label: blog_image_one,
+          widget: image,
+        }
+      - {
+          required: false,
+          name: blog_heading_one,
+          label: blog_heading_one,
+          widget: text,
+        }
+      - {
+          name: blog_description_one,
+          label: blog_description_one,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          required: false,
+          name: blog_link_one,
+          label: blog_link_one,
+          widget: text,
+        }
+      - {
+          required: false,
+          name: blog_image_two,
+          label: blog_image_two,
+          widget: image,
+        }
+      - {
+          required: false,
+          name: blog_heading_two,
+          label: blog_heading_two,
+          widget: text,
+        }
+      - {
+          name: blog_description_two,
+          label: blog_description_two,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          required: false,
+          name: blog_link_two,
+          label: blog_link_two,
+          widget: text,
+        }
+
+      - {
+          required: false,
+          name: blog_image_three,
+          label: blog_image_three,
+          widget: image,
+        }
+      - {
+          required: false,
+          name: blog_heading_three,
+          label: blog_heading_three,
+          widget: text,
+        }
+      - {
+          name: blog_description_three,
+          label: blog_description_three,
+          widget: markdown,
+          required: false,
+        }
+      - {
+          required: false,
+          name: blog_link_three,
+          label: blog_link_three,
+          widget: text,
+        }
+
+  - name: security
+    label: security
+    folder: "markdowns_files/security"
+    create: true
+    fields:
+      - { name: slug, label: slug, widget: hidden, default: security }
+      - {
+          name: category_language,
+          widget: select,
+          label: select Language,
+          options: ["English", "Thi"],
+        }
+      - { name: title, label: Title }
+      - { name: security_content, label: security_content, widget: markdown }
+  
+  - name: privacy_policy
+    label: privacy policy
+    folder: "markdowns_files/privacy_policy"
+    create: true
+    fields:
+      - { name: slug, label: slug, widget: hidden, default: privacy }
+      - {
+          name: category_language,
+          widget: select,
+          label: select Language,
+          options: ["English", "Thi"],
+        }
+      - { name: title, label: Title }
+      - {
+          name: privacy_policy_content,
+          label: privacy_policy_content,
+          widget: markdown,
+        }
+  
+  - name: terms_page
+    label: terms page
+    folder: "markdowns_files/terms_page"
+    create: true
+    fields:
+      - {
+          name: category_language,
+          widget: select,
+          label: select Language,
+          options: ["English", "Thi"],
+        }
+      - { name: slug, label: slug, widget: hidden, default: terms_page }
+      - { name: title, label: Title }
+      - { name: terms_content, label: terms content, widget: markdown }
+
+  - name: Blog_page
+    label: Blog page
+    folder: "markdowns_files/blog_page"
+    create: true
+    fields:
+      - {
+          name: category_language,
+          widget: select,
+          label: select Language,
+          options: ["English", "Thi"],
+        }
+      - { name: slug, label: slug, widget: hidden, default: blog_page }
+      - { name: title, label: blog title }
+      - { name: image, widget: image }
+      - { name: author name, widget: text }
+      - { required: false, name: date, widget: date }
+
+      - { name: summary, widget: text }
+      - { name: blog post, widget: markdown }
+      - {
+          name: category,
+          widget: select,
+          options: ["Company", "Event", "Culture"],
+        }
+
+  - name: News_page
+    label: News page
+    folder: "markdowns_files/news_page"
+    create: true
+    fields:
+      - { name: slug, label: slug, widget: hidden, default: news_page }
+      - { name: title, label: news title }
+      - {
+          name: category_language,
+          widget: select,
+          label: select Language,
+          options: ["English", "Thi"],
+        }
+      - { name: image, widget: image }
+      - { name: author name, widget: text }
+      - { required: false, name: date, widget: date }
+      - { name: summary, widget: text }
+      - { name: news article, widget: markdown }
+
+  - name: faq_page
+    label: faq page
+    folder: "markdowns_files/faq_page"
+    create: true
+    fields:
+      - {
+          name: category_language,
+          widget: select,
+          label: select Language,
+          options: ["English", "Thi"],
+        }
+      - { name: title, label: Question category title }
+      - { name: slug, label: slug, widget: hidden, default: faq_page }
+      - { name: question Category, label: question Category }
+      - label: "all faqs"
+        name: "all_faqs"
+        widget: "list"
+        summary: "{{fields.question_faq}} - {{fields.answer_faq}} "
+        fields:
+          - { name: title, label: question title }
+          - { label: question, name: question_faq, widget: text }
+          - { label: answer, name: answer_faq, widget: markdown }
+
+  - name: contact_page
+    label: contact page
+    folder: "markdowns_files/contact_page"
+    create: true
+    fields:
+      - {
+          name: category_language,
+          widget: select,
+          label: select Language,
+          options: ["English", "Thi"],
+        }
+      - { name: title, label: page name }
+      - { name: slug, label: slug, widget: hidden, default: contact_page }
+      - { name: description, label: description, widget: text }
+      - { name: visit, label: visit, widget: markdown }
+      - { name: chat, label: chat, widget: markdown }
+      - { name: line, label: line ID, widget: markdown }
+      - { name: email, label: email, widget: markdown }

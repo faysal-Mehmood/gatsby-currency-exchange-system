@@ -1,0 +1,110 @@
+.accordion-wrapper {
+	padding: 80px 0;
+
+	&--green {
+		background-color: $sea-mist;
+	}
+
+	&--grey {
+		background-color: $mist;
+	}
+
+	.highlight {
+		margin-bottom: 50px;
+		
+		h2 {
+			margin: 0;
+		}
+	}
+
+	.accordion__link.link {
+		margin-top: 20px;
+		color: black;
+
+		&:before {
+
+			background-color: black;
+		}
+
+		&:after {
+			border-color: black;
+		}
+	}
+}
+
+.accordion-wrapper--grey + .accordion-wrapper {
+	padding: 80px 0 0 0;
+
+	&:last-child {
+		padding-bottom: 80px;
+	}
+}
+
+.accordion {
+	padding: 0 20px;
+
+	&--green {
+		background-color: $light-green;
+	}
+
+	&--grey {
+		background-color: $white;
+	}
+
+	&__item {
+		border-bottom: 1px solid $smoke;
+
+		&:last-child {
+			border: none;
+		}
+
+		&--green {
+			border-color: $dark-green;
+		}
+
+		&-heading {
+			position: relative;
+			width: calc(100% - 20px);
+			color: black;
+			padding: 24px 0;
+			margin: 0;
+			font-size: 24px;
+			line-height: 28px;
+			cursor: pointer;
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: -15px;
+				top: calc(50% - 3px);
+				border: solid $blue;
+				border-width: 0 1px 1px 0;
+				transform: translateY(-50%) rotate(45deg);
+				width: 10px;
+				height: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	
+    .accordion-wrapper {
+        padding: 50px 0;
+	}
+	
+	.accordion-wrapper--grey + .accordion-wrapper {
+		padding: 50px 0 0 0;
+	
+		&:last-child {
+			padding-bottom: 50px;
+		}
+	}
+
+	.accordion {
+		p {
+			font-size: 20px;
+		}
+		
+	}
+}

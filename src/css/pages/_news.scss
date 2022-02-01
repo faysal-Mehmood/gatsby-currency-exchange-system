@@ -1,0 +1,94 @@
+@import "src/css/variables";
+
+.news__subheading {
+    font-size: 21px;
+    line-height: 31px;
+    font-weight: 400;
+}
+
+.contact__subheading {
+    font-size: 21px;
+    line-height: 31px;
+    font-weight: 400;
+}
+
+.form__container {
+    margin-top: 50px;
+    background: $white;
+    padding: 50px;
+    box-shadow: $box-shadow;
+}
+
+.contact__address {
+    margin-top: 50px; 
+    & p {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+.background__images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    z-index: -1;
+
+    & img {
+        width: 480px;
+        position: absolute;
+
+        &:first-child {
+            right: 0;
+            bottom: 20%;
+        }
+
+        &:last-child {
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+form {
+    width: 100%
+}
+
+textarea {
+    margin-bottom: 30px;
+}
+
+.form__input--wrapper {
+    width: calc(50% - 20px);
+    display: inline-block;
+    margin-bottom: 30px;
+
+    &:nth-child(odd) {
+        margin-right: 40px;
+    }
+}
+
+.form__input {
+    border: 1px solid $smoke;
+    padding: 15px;
+    border-radius: 0;
+    display: inline-block;
+    font-size: 17px;
+    width: 100%;
+
+    &::placeholder {
+        color: #214dce;
+    }
+
+    &--half {
+        width: calc(50% - 30px);
+
+        &:nth-child(even) {
+            margin-left: 60px;
+        }
+    }
+
+    &--full {
+        width: 100%;
+    }
+}

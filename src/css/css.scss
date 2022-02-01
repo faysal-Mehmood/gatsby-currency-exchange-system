@@ -1,0 +1,10 @@
+// Import font files
+// @import "fonts/index";
+* {
+	box-sizing: border-box;
+}
+
+@import "variables";
+@import "typography";
+@import "components";
+@import "pages/privacy-conditions";
